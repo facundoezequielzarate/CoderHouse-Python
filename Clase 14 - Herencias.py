@@ -4,7 +4,7 @@ class AnimalMarino:
         self.apendices = apendices
     
     def presentacion(self):
-        print(f"Soy una " {self.especie} "y yengo " {self.apendices} "apéndices") """no entiendo por qué me arroja un error entre el print y el paréntesis"""
+        print(f"Soy un {self.especie} y tengo {self.apendices} apéndices") # no entiendo por qué me arroja un error entre el print y el paréntesis
 
 class Mamifero(AnimalMarino):
     pass
