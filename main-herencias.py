@@ -2,12 +2,15 @@ class Animales:
     def __init__(self, desplazarse):
         self.desplazarse = desplazarse
 
+
 class AnimalesConPelaje(Animales):
     def __init__(self, pelaje):
         self.pelaje = pelaje
 
     def presentarse(self):
-        print(f"Hola soy {self.nombre_lindo}, mi pelaje es {self.pelaje} y me desplazo {self.desplazarse}")
+        print(
+            f"Hola soy {self.nombre_lindo}, mi pelaje es {self.pelaje} y me desplazo {self.desplazarse}"
+        )
 
 
 class AnimalesConPlumaje(Animales):
@@ -15,7 +18,9 @@ class AnimalesConPlumaje(Animales):
         self.plumaje = plumaje
 
     def presentarse(self):
-        print(f"Hola soy {self.nombre_lindo}, mi plumaje es {self.plumaje} y me desplazo {self.desplazarse}")
+        print(
+            f"Hola soy {self.nombre_lindo}, mi plumaje es {self.plumaje} y me desplazo {self.desplazarse}"
+        )
 
 
 class Foca(AnimalesConPelaje):
