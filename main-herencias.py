@@ -1,32 +1,40 @@
-class AnimalesConPelaje:
+class Animales:
+    def __init__(self, desplazarse):
+        self.desplazarse = desplazarse
+
+class AnimalesConPelaje(Animales):
     def __init__(self, pelaje):
         self.pelaje = pelaje
 
     def presentarse(self):
-        print(f"Hola soy {self.nombre_lindo} y mi pelaje es {self.pelaje}")
+        print(f"Hola soy {self.nombre_lindo}, mi pelaje es {self.pelaje} y me desplazo {self.desplazarse}")
 
 
-class AnimalesConPlumaje:
+class AnimalesConPlumaje(Animales):
     def __init__(self, plumaje):
         self.plumaje = plumaje
 
     def presentarse(self):
-        print(f"Hola soy {self.nombre_lindo} y mi plumaje es {self.plumaje}")
+        print(f"Hola soy {self.nombre_lindo}, mi plumaje es {self.plumaje} y me desplazo {self.desplazarse}")
 
 
 class Foca(AnimalesConPelaje):
+    desplazarse = "reptando o deslizándome"
     nombre_lindo = "una Foca"
 
 
 class Pinguino(AnimalesConPlumaje):
+    desplazarse = "caminando o nadando"
     nombre_lindo = "un Pingüino"
 
 
 class Caballo(AnimalesConPelaje):
+    desplazarse = "caminando o trotando"
     nombre_lindo = "un Caballo"
 
 
 class Condor(AnimalesConPlumaje):
+    desplazarse = "volando"
     nombre_lindo = "un Cóndor"
 
 
@@ -51,4 +59,6 @@ mi_caballo_blanco.presentarse()
 
 
 mi_condor = Condor("negro y blanco")
+mi_condor_desplumado = Condor("ninguno, porque no tengo más plumas")
 mi_condor.presentarse()
+mi_condor_desplumado.presentarse()
